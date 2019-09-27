@@ -5,13 +5,13 @@
 //TODO
 double getInteger(double num)
 {
-	return num; 
+	return (int) num; 
 }
 
 //TODO
 double getDecimal(double num)
 {
-	return num;
+	return (int) num - num;
 }
 
 double getRandomNum()
