@@ -2,16 +2,22 @@
 #include <stdlib.h>
 #include <time.h>
 
-//TODO
+/*
+	@Input: double num
+	@Output: the integer part of num 
+*/ 
 double getInteger(double num)
 {
-	return num; 
+	return 0;
 }
 
-//TODO
+/*
+	@Input: double num
+	@Output: the decimal part of num
+*/
 double getDecimal(double num)
 {
-	return num;
+	return 0;
 }
 
 double getRandomNum()
@@ -27,11 +33,10 @@ int main()
 	double randomNum = getRandomNum();
 	double integer = getInteger(randomNum);
 	double decimal = getDecimal(randomNum);
-	printf("Initial Number: %f\nThe integer part: %f\nThe decimal part: %f\n",randomNum,integer,decimal);
-	if (integer + decimal != randomNum) {
-		printf("Wrong answer.");
+	if (integer + decimal == randomNum) {
+		printf("Correct.");
 	}
 	else {
-		printf("Rigth answer.");
+		printf("Wrong.");
 	}
 }
