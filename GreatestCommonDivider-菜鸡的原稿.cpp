@@ -2,15 +2,20 @@
 
 int getGCD(int m, int n)
 {
-	while (m!=n){
+	while (m*n != 0){
 		if(m>n){
-			m=m-n;
+			m=m%n;
 		}
 		else {
-			n=n-m;
+			n=n%m;
 		}
 	}
-	return m;
+	while (m == 0){
+		return n;
+	}
+	while (n == 0){
+		return m;
+	}
 }
 
 int main()
