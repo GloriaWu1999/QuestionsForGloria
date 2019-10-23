@@ -2,6 +2,12 @@
 
 int getGCD(int m, int n)
 {
+	// This 'while' end condition is workable, but not optimal.
+	// First, you would have to multiply in every iteration
+	// and multiplying is a relatively high cost operation.
+	// But this is not a big problem. 
+	// Second, you will find that the round before m*n == 0
+	// is always m == n. So you can actually end while a round earlier.
 	while (m*n != 0){
 		if(m>n){
 			m=m%n;
@@ -10,6 +16,8 @@ int getGCD(int m, int n)
 			n=n%m;
 		}
 	}
+	// Although using 'while' to act as 'if' is workable,
+	// this is definitely not recommended.
 	while (m == 0){
 		return n;
 	}
